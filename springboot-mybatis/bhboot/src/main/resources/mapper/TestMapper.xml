@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bhboot.mapper.TestMapper">
+
+	<insert id="insTestModel" parameterType="bhboot.model.TestModel">
+		INSERT INTO TEST_MODEL (test_id, value)
+		VALUES (#{testId}, #{value})
+	</insert>
+	
+	<select id="getTestModel" resultType="bhboot.model.TestModel">
+		SELECT *
+		FROM TEST_MODEL
+		WHERE test_id = #{testId}
+	</select>
+</mapper>
